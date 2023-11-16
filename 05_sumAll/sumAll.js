@@ -1,31 +1,29 @@
-const sumAll = function (a, b)  {
+const sumAll = function (a, b) {
 
-let strArgs = Array.from(arguments)
+    let strArgs = Array.from(arguments)
 
-        strArgs.forEach((element) => {
-            
-            if (element < 0) {
-
-               return false
-                
-            } 
-        })
-
-        if (strArgs === false) {
-
-            return 'ERROR'
-
-
-        } else {
-
-let length = Math.abs(a-b)+1
-
-           return length*(a + b)/2 
+    strArgs.forEach((element) => {
+        if (element < 0 || typeof element !== "number") {
+            strArgs = false
 
         }
+    })
+
+    if (strArgs === false) {
+
+        return 'ERROR'
 
 
-} 
+    } else {
+
+        let length = Math.abs(a - b) + 1
+
+        return length * (a + b) / 2
+
+    }
+
+
+}
 
 
 
