@@ -1,10 +1,17 @@
 const convertToCelsius = function(fr) {
 
-result = ((fr-32) * (5/9)).toFixed(1)
+result = Math.round((fr-32) * (5/9) * 10) / 10
+
+return result
 
 };
 
-const convertToFahrenheit = function() {
+const convertToFahrenheit = function(cel) {
+
+result = Math.round((cel * (9 / 5) + 32) * 10) / 10
+
+
+return result
 };
 
 // Do not edit below this line
